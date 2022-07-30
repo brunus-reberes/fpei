@@ -1,0 +1,31 @@
+<ion-content padding>
+
+      <ion-row class="logo-row">
+        <ion-col col-12 class="image" width-67>
+          <img src="http://fpei.netpowersites.com/resources/logo.png"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <h2>FPEI</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button (click)="login()" color="primary" type="submit" block>Entrar</button>
+      </div>
+
+      <button ion-button color="primary" block clear (click)="signin()">Não tem conta? Registe-se já.</button>
+
+</ion-content>

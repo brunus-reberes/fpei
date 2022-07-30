@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Gráficos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2><button (click)="mes_anterior()"><ion-icon name="arrow-back"></ion-icon></button></ion-col>
+      <ion-col class="mes" col-8>{{mes}}</ion-col>
+      <ion-col col-2><button (click)="mes_seguinte()"><ion-icon name="arrow-forward"></ion-icon></button></ion-col>
+    </ion-row>
+  </ion-grid>
+    <canvas #barCanvas></canvas>
+    <ul>
+      <li><div class="afps"></div><span>A</span>AFPS - Área de Formação Pessoal e Social</li>
+      <li><div class="acm"></div><span>A</span>ACM - Área de Conhecimento do Mundo</li>
+      <li><div class="ep"></div><span>A</span>EP - Expressão Plástica</li>
+      <li><div class="emo"></div><span>A</span>EMo - Expressão Motora</li>
+      <li><div class="ed"></div><span>A</span>ED - Expressão Dramática</li>
+      <li><div class="emu"></div><span>A</span>EMu - Expressão Músical</li>
+      <li><div class="lo"></div><span>A</span>LO/EX - Linguagem Oral/Expressão Escrita</li>
+      <li><div class="mat"></div><span>A</span>Mat - Matemática</li>
+      <li><div class="nt"></div><span>A</span>NT - Novas Tecnologias</li>
+      <li><div class="fc"></div><span>A</span>FC - Formação Cristã</li>
+    </ul>
+</ion-content>
