@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{dia_semana}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-list-header>
+        <strong>{{dia_dia}}</strong>
+      </ion-list-header>
+    </ion-item>
+
+    <ion-item *ngFor="let planificacao of plans">
+      <button ion-item (click)="openPlanificacao(planificacao)">
+        <h3>{{planificacao.atividade_nome}}</h3>
+        <p>
+          {{planificacao.horario_inicio}}
+        </p>
+      </button>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

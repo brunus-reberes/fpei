@@ -1,0 +1,86 @@
+page-estatisticas {
+  ion-navbar{
+    text-align: center;
+  }
+  button{
+    color: #3182ff;
+    border-width:1;
+    border-color: #3182ff;
+    background-color: #fff;
+    border-style: solid;
+    font-size: 25px;
+  }
+  ion-col {
+      text-align: center;
+    }
+ul {
+  list-style-type:none;
+}
+.mes{
+  font-size: 20px;
+  margin: auto;
+}
+.afps{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(159, 64, 255);
+  display: inline-block;
+}
+.acm{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 99, 132);
+  display: inline-block;
+}
+.ep{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(54, 162, 235);
+  display: inline-block;
+}
+.emo{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 206, 86);
+  display: inline-block;
+}
+.ed{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 64, 65);
+  display: inline-block;
+}
+.emu{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(75, 192, 192);
+  display: inline-block;
+}
+.lo{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(64, 65, 255);
+  display: inline-block;
+}
+.mat{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(153, 102, 255);
+  display: inline-block;
+}
+.nt{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 159, 64);
+  display: inline-block;
+}
+.fc{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(25, 63, 100);
+  display: inline-block;
+}
+span{
+  color: #FFF;
+}
+}

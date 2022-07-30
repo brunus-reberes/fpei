@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Adicionar</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form (ngSubmit)="addPlan()">
+
+      <ion-list>
+            <ion-list-header>
+              <strong>Data e Horário</strong>
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label>Dia</ion-label>
+                <ion-datetime displayFormat="DDD, DD MMM YYYY" [(ngModel)]="plano.data_planificacao" name="data_planificacao"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Hora</ion-label>
+                <ion-datetime displayFormat="HH:mm" [(ngModel)]="plano.horario_inicio" name="horario_inicio"></ion-datetime>
+            </ion-item>
+
+            <ion-col></ion-col>
+
+            <ion-list-header>
+              <strong>Atividade</strong>
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label>Nome</ion-label>
+                <ion-input type="text" [(ngModel)]="plano.atividade_nome" name="atividade_nome"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Descrição</ion-label>
+                <ion-textarea [(ngModel)]="plano.atividade_descricao" name="atividade_descricao"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Intenções Pedagógicas</ion-label>
+                <ion-textarea [(ngModel)]="plano.intencoes_pedagogicas" name="intencoes_pedagogicas"></ion-textarea>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Áreas Curriculares</ion-label>
+                <ion-select multiple="true" [(ngModel)]="plano.areas_curriculares" name="areas_curriculares">
+                  <ion-option>Área de Formação Pessoal e Social</ion-option>
+                  <ion-option>Área do Conhecimento do Mundo</ion-option>
+                  <ion-option>Expressão Plástica</ion-option>
+                  <ion-option>Expressão Motora</ion-option>
+                  <ion-option>Expressão Dramática</ion-option>
+                  <ion-option>Expressão Músical</ion-option>
+                  <ion-option>Linguagem Oral/Expressão Escrita</ion-option>
+                  <ion-option>Matemática</ion-option>
+                  <ion-option>Novas Tecnologias</ion-option>
+                  <ion-option>Formação Cristã</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <button ion-button full>Adicionar</button>
+
+        </ion-list>
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,10 @@
+{
+  "name": "FPEI",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "http://fpei.netpowersites.com/public/api/"
+  }]
+}

@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Plano Semanal</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPlan()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-2><button (click)="semana_anterior()" class="seta"><ion-icon name="arrow-back"></ion-icon></button></ion-col>
+      <ion-col class="mes" col-8>{{mes}}</ion-col>
+      <ion-col col-2><button (click)="semana_seguinte()" class="seta"><ion-icon name="arrow-forward"></ion-icon></button></ion-col>
+    </ion-row>
+    <ion-row class="cabecalho">
+      <ion-col col-2><button (click)="vista_diaria(this.seg, this.planificacoes)">{{Segunda}}<br>{{dia_Segunda}}</button></ion-col>
+      <ion-col col-2><button (click)="vista_diaria(this.ter, this.planificacoes)">{{Terca}}<br>{{dia_Terca}}</button></ion-col>
+      <ion-col col-2><button (click)="vista_diaria(this.qua, this.planificacoes)">{{Quarta}}<br>{{dia_Quarta}}</button></ion-col>
+      <ion-col col-2><button (click)="vista_diaria(this.qui, this.planificacoes)">{{Quinta}}<br>{{dia_Quinta}}</button></ion-col>
+      <ion-col col-2><button (click)="vista_diaria(this.sex, this.planificacoes)">{{Sexta}}<br>{{dia_Sexta}}</button></ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col class="line-rigth" col-1>
+        <div *ngFor="let manha of segunda_manha" (click)="openAtividade(manha)">
+          <p>{{manha.atividade_nome}}<br>{{manha.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let manha of terca_manha" (click)="openAtividade(manha)">
+          <p>{{manha.atividade_nome}}<br>{{manha.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let manha of quarta_manha" (click)="openAtividade(manha)">
+          <p>{{manha.atividade_nome}}<br>{{manha.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let manha of quinta_manha"(click)="openAtividade(manha)">
+          <p>{{manha.atividade_nome}}<br>{{manha.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let manha of sexta_manha"(click)="openAtividade(manha)">
+          <p>{{manha.atividade_nome}}<br>{{manha.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="cabecalho">
+      <ion-col col-12>Almoço</ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col class="line-rigth" col-1>
+        <div *ngFor="let tarde of segunda_tarde"(click)="openAtividade(tarde)">
+          <p>{{tarde.atividade_nome}}<br>{{tarde.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let tarde of terca_tarde"(click)="openAtividade(tarde)">
+          <p>{{tarde.atividade_nome}}<br>{{tarde.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let tarde of quarta_tarde"(click)="openAtividade(tarde)">
+          <p>{{tarde.atividade_nome}}<br>{{tarde.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let tarde of quinta_tarde"(click)="openAtividade(tarde)">
+          <p>{{tarde.atividade_nome}}<br>{{tarde.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+      <ion-col class="line-rigth" col-2>
+        <div *ngFor="let tarde of sexta_tarde"(click)="openAtividade(tarde)">
+          <p>{{tarde.atividade_nome}}<br>{{tarde.horario_inicio}}</p>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+</ion-grid>
+
+</ion-list>
+
+</ion-content>
